@@ -1,0 +1,15 @@
+{
+  "runAt": "2026-08-24T17:53:47.086Z",
+  "mode": "deterministic",
+  "cases": [
+    { "repository": "ml-explore/mlx-examples", "scope": "lora", "coverage": 1.0, "latencySeconds": 2.2 },
+    { "repository": "pytorch/examples", "scope": "mnist", "coverage": 1.0, "latencySeconds": 2.5 }
+  ],
+  "summary": {
+    "meanCoverage": 1.0,
+    "invalidEvidenceIdRate": 0.0,
+    "medianLatencySeconds": 2.4,
+    "modelCalls": 0,
+    "modelTokens": 0
+  }
+}

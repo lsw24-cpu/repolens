@@ -1,0 +1,21 @@
+{
+  "runAt": "2026-08-24T17:21:21.849Z",
+  "mode": "paired-standard-and-bounded-exploration",
+  "cases": [
+    { "repository": "karpathy/nanoGPT", "standardCoverage": 0.6, "explorationCoverage": 1.0, "standardLatencySeconds": 23.9, "explorationLatencySeconds": 26.8 },
+    { "repository": "openai/whisper", "standardCoverage": 0.286, "explorationCoverage": 0.714, "standardLatencySeconds": 17.7, "explorationLatencySeconds": 26.4 },
+    { "repository": "facebookresearch/segment-anything", "standardCoverage": 0.167, "explorationCoverage": 0.667, "standardLatencySeconds": 23.2, "explorationLatencySeconds": 26.9 },
+    { "repository": "ggml-org/llama.cpp", "standardCoverage": 0.167, "explorationCoverage": 0.167, "standardLatencySeconds": 23.2, "explorationLatencySeconds": 36.6 }
+  ],
+  "summary": {
+    "meanStandardCoverage": 0.305,
+    "meanExplorationCoverage": 0.637,
+    "casesImproved": 3,
+    "caseCount": 4,
+    "invalidEvidenceIdRate": 0.0,
+    "medianStandardLatencySeconds": 23.2,
+    "medianExplorationLatencySeconds": 26.9,
+    "recordedModelCalls": 15,
+    "recordedModelTokens": 139842
+  }
+}

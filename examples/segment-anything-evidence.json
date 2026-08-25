@@ -1,0 +1,475 @@
+{
+  "repo": {
+    "fullName": "facebookresearch/segment-anything",
+    "description": "The repository provides code for running inference with the SegmentAnything Model (SAM), links for downloading the trained model checkpoints, and example notebooks that show how to use the model.",
+    "stars": 54756,
+    "language": "Jupyter Notebook",
+    "license": "Apache-2.0",
+    "branch": "main",
+    "revision": "dca509fe793f601edb92606367a655c15ac00fdf",
+    "url": "https://github.com/facebookresearch/segment-anything"
+  },
+  "engine": {
+    "model": "deepseek-v4-flash"
+  },
+  "stats": {
+    "files": 59,
+    "folders": 17,
+    "minutes": 110,
+    "evidence": 10
+  },
+  "usage": {
+    "modelCalls": 1,
+    "inputTokens": 8334,
+    "outputTokens": 2872,
+    "totalTokens": 11206
+  },
+  "tree": [
+    {
+      "path": ".flake8",
+      "type": "blob",
+      "size": 211
+    },
+    {
+      "path": ".gitignore",
+      "type": "blob",
+      "size": 389
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "type": "blob",
+      "size": 3541
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "type": "blob",
+      "size": 1400
+    },
+    {
+      "path": "LICENSE",
+      "type": "blob",
+      "size": 11357
+    },
+    {
+      "path": "README.md",
+      "type": "blob",
+      "size": 9621
+    },
+    {
+      "path": "assets",
+      "type": "tree"
+    },
+    {
+      "path": "assets/masks1.png",
+      "type": "blob",
+      "size": 3703371
+    },
+    {
+      "path": "assets/masks2.jpg",
+      "type": "blob",
+      "size": 133278
+    },
+    {
+      "path": "assets/minidemo.gif",
+      "type": "blob",
+      "size": 2015643
+    },
+    {
+      "path": "assets/model_diagram.png",
+      "type": "blob",
+      "size": 581875
+    },
+    {
+      "path": "assets/notebook1.png",
+      "type": "blob",
+      "size": 874274
+    },
+    {
+      "path": "assets/notebook2.png",
+      "type": "blob",
+      "size": 1221706
+    },
+    {
+      "path": "demo",
+      "type": "tree"
+    },
+    {
+      "path": "demo/README.md",
+      "type": "blob",
+      "size": 3681
+    },
+    {
+      "path": "demo/configs",
+      "type": "tree"
+    },
+    {
+      "path": "demo/configs/webpack",
+      "type": "tree"
+    },
+    {
+      "path": "demo/configs/webpack/common.js",
+      "type": "blob",
+      "size": 2051
+    },
+    {
+      "path": "demo/configs/webpack/dev.js",
+      "type": "blob",
+      "size": 767
+    },
+    {
+      "path": "demo/configs/webpack/prod.js",
+      "type": "blob",
+      "size": 636
+    },
+    {
+      "path": "demo/package.json",
+      "type": "blob",
+      "size": 2002
+    },
+    {
+      "path": "demo/postcss.config.js",
+      "type": "blob",
+      "size": 339
+    },
+    {
+      "path": "demo/src",
+      "type": "tree"
+    },
+    {
+      "path": "demo/src/App.tsx",
+      "type": "blob",
+      "size": 4245
+    },
+    {
+      "path": "demo/src/assets",
+      "type": "tree"
+    },
+    {
+      "path": "demo/src/assets/data",
+      "type": "tree"
+    },
+    {
+      "path": "demo/src/assets/data/dogs.jpg",
+      "type": "blob",
+      "size": 448722
+    },
+    {
+      "path": "demo/src/assets/index.html",
+      "type": "blob",
+      "size": 532
+    },
+    {
+      "path": "demo/src/assets/scss",
+      "type": "tree"
+    },
+    {
+      "path": "demo/src/assets/scss/App.scss",
+      "type": "blob",
+      "size": 59
+    },
+    {
+      "path": "demo/src/components",
+      "type": "tree"
+    },
+    {
+      "path": "demo/src/components/Stage.tsx",
+      "type": "blob",
+      "size": 1580
+    },
+    {
+      "path": "demo/src/components/Tool.tsx",
+      "type": "blob",
+      "size": 2136
+    },
+    {
+      "path": "demo/src/components/helpers",
+      "type": "tree"
+    },
+    {
+      "path": "demo/src/components/helpers/Interfaces.tsx",
+      "type": "blob",
+      "size": 611
+    },
+    {
+      "path": "demo/src/components/helpers/maskUtils.tsx",
+      "type": "blob",
+      "size": 1616
+    },
+    {
+      "path": "demo/src/components/helpers/onnxModelAPI.tsx",
+      "type": "blob",
+      "size": 2198
+    },
+    {
+      "path": "demo/src/components/helpers/scaleHelper.tsx",
+      "type": "blob",
+      "size": 614
+    },
+    {
+      "path": "demo/src/components/hooks",
+      "type": "tree"
+    },
+    {
+      "path": "demo/src/components/hooks/context.tsx",
+      "type": "blob",
+      "size": 959
+    },
+    {
+      "path": "demo/src/components/hooks/createContext.tsx",
+      "type": "blob",
+      "size": 736
+    },
+    {
+      "path": "demo/src/index.tsx",
+      "type": "blob",
+      "size": 529
+    },
+    {
+      "path": "demo/tailwind.config.js",
+      "type": "blob",
+      "size": 337
+    },
+    {
+      "path": "demo/tsconfig.json",
+      "type": "blob",
+      "size": 644
+    },
+    {
+      "path": "linter.sh",
+      "type": "blob",
+      "size": 564
+    },
+    {
+      "path": "notebooks",
+      "type": "tree"
+    },
+    {
+      "path": "notebooks/automatic_mask_generator_example.ipynb",
+      "type": "blob",
+      "size": 4380984
+    },
+    {
+      "path": "notebooks/images",
+      "type": "tree"
+    },
+    {
+      "path": "notebooks/images/dog.jpg",
+      "type": "blob",
+      "size": 99846
+    },
+    {
+      "path": "notebooks/images/groceries.jpg",
+      "type": "blob",
+      "size": 168066
+    },
+    {
+      "path": "notebooks/images/truck.jpg",
+      "type": "blob",
+      "size": 271475
+    },
+    {
+      "path": "notebooks/onnx_model_example.ipynb",
+      "type": "blob",
+      "size": 22502
+    },
+    {
+      "path": "notebooks/predictor_example.ipynb",
+      "type": "blob",
+      "size": 8380947
+    },
+    {
+      "path": "scripts",
+      "type": "tree"
+    },
+    {
+      "path": "scripts/amg.py",
+      "type": "blob",
+      "size": 7043
+    },
+    {
+      "path": "scripts/export_onnx_model.py",
+      "type": "blob",
+      "size": 6250
+    },
+    {
+      "path": "segment_anything",
+      "type": "tree"
+    },
+    {
+      "path": "segment_anything/__init__.py",
+      "type": "blob",
+      "size": 427
+    },
+    {
+      "path": "segment_anything/automatic_mask_generator.py",
+      "type": "blob",
+      "size": 15148
+    },
+    {
+      "path": "segment_anything/build_sam.py",
+      "type": "blob",
+      "size": 2941
+    },
+    {
+      "path": "segment_anything/modeling",
+      "type": "tree"
+    },
+    {
+      "path": "segment_anything/modeling/__init__.py",
+      "type": "blob",
+      "size": 385
+    },
+    {
+      "path": "segment_anything/modeling/common.py",
+      "type": "blob",
+      "size": 1479
+    },
+    {
+      "path": "segment_anything/modeling/image_encoder.py",
+      "type": "blob",
+      "size": 14420
+    },
+    {
+      "path": "segment_anything/modeling/mask_decoder.py",
+      "type": "blob",
+      "size": 6615
+    },
+    {
+      "path": "segment_anything/modeling/prompt_encoder.py",
+      "type": "blob",
+      "size": 8594
+    },
+    {
+      "path": "segment_anything/modeling/sam.py",
+      "type": "blob",
+      "size": 7226
+    },
+    {
+      "path": "segment_anything/modeling/transformer.py",
+      "type": "blob",
+      "size": 8397
+    },
+    {
+      "path": "segment_anything/predictor.py",
+      "type": "blob",
+      "size": 11649
+    },
+    {
+      "path": "segment_anything/utils",
+      "type": "tree"
+    },
+    {
+      "path": "segment_anything/utils/__init__.py",
+      "type": "blob",
+      "size": 197
+    },
+    {
+      "path": "segment_anything/utils/amg.py",
+      "type": "blob",
+      "size": 12712
+    },
+    {
+      "path": "segment_anything/utils/onnx.py",
+      "type": "blob",
+      "size": 5812
+    },
+    {
+      "path": "segment_anything/utils/transforms.py",
+      "type": "blob",
+      "size": 3972
+    },
+    {
+      "path": "setup.cfg",
+      "type": "blob",
+      "size": 371
+    },
+    {
+      "path": "setup.py",
+      "type": "blob",
+      "size": 541
+    }
+  ],
+  "readmeExcerpt": "Latest updates SAM 2: Segment Anything in Images and Videos Please check out our new release on Segment Anything Model 2 SAM 2 https://github.com/facebookresearch/segment anything 2 . SAM 2 code: https://github.com/facebookresearch/segment anything 2 SAM 2 demo: https://sam2.metademolab.com/ SAM 2 paper: https://arxiv.org/abs/2408.00714 SAM 2 architecture https://github.com/facebookresearch/segment anything 2/blob/main/assets/model diagram.png?raw=true Segment Anything Model 2 SAM 2 is a foundation model towards so",
+  "keyFiles": [
+    {
+      "id": "E1",
+      "path": "README.md",
+      "lineStart": 1,
+      "lineEnd": 65,
+      "excerpt": "## Latest updates -- SAM 2: Segment Anything in Images and Videos\n\nPlease check out our new release on [**Segment Anything Model 2 (SAM 2)**](https://github.com/facebookresearch/segment-anything-2).\n\n* SAM 2 code: https://github.com/facebookresearch/segment-anything-2\n* SAM 2 demo: https://sam2.metademolab.com/\n* SAM 2 paper: https://arxiv.org/abs/2408.00714\n\n ![SAM 2 architecture](https://github.com/facebookresearch/segment-anything-2/blob/main/assets/model_diagram.png?raw=true)\n\n**Segment Anything Model 2 (SAM 2)** is a foundation model towards solving promptable visual segmentation in images and videos. We extend SAM to video by considering images as a video with a single frame. The model design is a simple transformer architecture with streaming memory for real-time video processing. We build a model-in-the-loop data engine, which improves model and data via user interaction, to collect [**our SA-V dataset**](https://ai.meta.com/datasets/segment-anything-video), the largest video segmentation dataset to date. SAM 2 trained on our data provides strong performance across a wide range of tasks and visual domains.\n\n# Segment Anything\n\n**[Meta AI Research, FAIR](https://ai.facebook.com/research/)**\n\n[Alexander Kirillov](https://alexander-kirillov.github.io/), [Eric Mintun](https://ericmintun.github.io/), [Nikhila Ravi](https://nikhilaravi.com/), [Hanzi Mao](https://hanzimao.me/), Chloe Rolland, Laura Gustafson, [Tete Xiao](https://tetexiao.com), [Spencer Whitehead](https://www.spencerwhitehead.com/), Alex Berg, Wan-Yen Lo, [Piotr Dollar](https://pdollar.github.io/), [Ross Girshick](https://www.rossgirshick.info/)\n\n[[`Paper`](https://ai.facebook.com/research/publications/segment-anything/)] [[`Project`](https://segment-anything.com/)] [[`Demo`](https://segment-anything.com/demo)] [[`Dataset`](https://segment-anything.com/dataset/index.html)] [[`Blog`](https://ai.facebook.com/blog/segment-anything-foundation-model-image-segmentation/)] [[`BibTeX`](#citing-segment-anything)]\n\n![SAM design](assets/model_diagram.png?raw=true)\n\nThe **Segment Anything Model (SAM)** produces high quality object masks from input prompts such as points or boxes, and it can be used to generate masks for all objects in an image. It has been trained on a [dataset](https://segment-anything.com/dataset/index.html) of 11 million images and 1.1 billion masks, and has strong zero-shot performance on a variety of segmentation tasks.\n\n<p float=\"left\">\n  <img src=\"assets/masks1.png?raw=true\" width=\"37.25%\" />\n  <img src=\"assets/masks2.jpg?raw=true\" width=\"61.5%\" /> \n</p>\n\n## Installation\n\nThe code requires `python>=3.8`, as well as `pytorch>=1.7` and `torchvision>=0.8`. Please follow the instructions [here](https://pytorch.org/get-started/locally/) to install both PyTorch and TorchVision dependencies. Installing both PyTorch and TorchVision with CUDA support is strongly recommended.\n\nInstall Segment Anything:\n\n```\npip install git+https://github.com/facebookresearch/segment-anything.git\n```\n\nor clone the repository locally and install with\n\n```\ngit clone git@github.com:facebookresearch/segment-anything.git\ncd segment-anything; pip install -e .\n```\n\nThe following optional dependencies are necessary for mask post-processing, saving masks in COCO format, the example notebooks, and exporting the model in ONNX format. `jupyter` is also required to run the example notebooks.\n\n```\npip install opencv-python pycocotools matplotlib onnxruntime onnx\n```\n\n## <a name=\"GettingStarted\"></a>Getting Started\n\nFirst download a [model checkpoint](#model-checkpoints). Then the model can be used in just a few lines to get masks from a given prompt:\n\n```\nfrom segment_anything import SamPredictor, sam_model_registry\nsam = sam_model_registry[\"<model_type>\"](checkpoint=\"<path/to/checkpoint>\")\npredictor = SamPredictor(sam)\npredictor.set_image(<your_image>)\nmasks, _, _ = predictor.predict(<input_prompts>)\n```\n\nor generate masks for an entire image:",
+      "url": "https://github.com/facebookresearch/segment-anything/blob/dca509fe793f601edb92606367a655c15ac00fdf/README.md#L1-L65"
+    },
+    {
+      "id": "E2",
+      "path": "README.md",
+      "lineStart": 46,
+      "lineEnd": 124,
+      "excerpt": "\nThe following optional dependencies are necessary for mask post-processing, saving masks in COCO format, the example notebooks, and exporting the model in ONNX format. `jupyter` is also required to run the example notebooks.\n\n```\npip install opencv-python pycocotools matplotlib onnxruntime onnx\n```\n\n## <a name=\"GettingStarted\"></a>Getting Started\n\nFirst download a [model checkpoint](#model-checkpoints). Then the model can be used in just a few lines to get masks from a given prompt:\n\n```\nfrom segment_anything import SamPredictor, sam_model_registry\nsam = sam_model_registry[\"<model_type>\"](checkpoint=\"<path/to/checkpoint>\")\npredictor = SamPredictor(sam)\npredictor.set_image(<your_image>)\nmasks, _, _ = predictor.predict(<input_prompts>)\n```\n\nor generate masks for an entire image:\n\n```\nfrom segment_anything import SamAutomaticMaskGenerator, sam_model_registry\nsam = sam_model_registry[\"<model_type>\"](checkpoint=\"<path/to/checkpoint>\")\nmask_generator = SamAutomaticMaskGenerator(sam)\nmasks = mask_generator.generate(<your_image>)\n```\n\nAdditionally, masks can be generated for images from the command line:\n\n```\npython scripts/amg.py --checkpoint <path/to/checkpoint> --model-type <model_type> --input <image_or_folder> --output <path/to/output>\n```\n\nSee the examples notebooks on [using SAM with prompts](/notebooks/predictor_example.ipynb) and [automatically generating masks](/notebooks/automatic_mask_generator_example.ipynb) for more details.\n\n<p float=\"left\">\n  <img src=\"assets/notebook1.png?raw=true\" width=\"49.1%\" />\n  <img src=\"assets/notebook2.png?raw=true\" width=\"48.9%\" />\n</p>\n\n## ONNX Export\n\nSAM's lightweight mask decoder can be exported to ONNX format so that it can be run in any environment that supports ONNX runtime, such as in-browser as showcased in the [demo](https://segment-anything.com/demo). Export the model with\n\n```\npython scripts/export_onnx_model.py --checkpoint <path/to/checkpoint> --model-type <model_type> --output <path/to/output>\n```\n\nSee the [example notebook](https://github.com/facebookresearch/segment-anything/blob/main/notebooks/onnx_model_example.ipynb) for details on how to combine image preprocessing via SAM's backbone with mask prediction using the ONNX model. It is recommended to use the latest stable version of PyTorch for ONNX export.\n\n### Web demo\n\nThe `demo/` folder has a simple one page React app which shows how to run mask prediction with the exported ONNX model in a web browser with multithreading. Please see [`demo/README.md`](https://github.com/facebookresearch/segment-anything/blob/main/demo/README.md) for more details.\n\n## <a name=\"Models\"></a>Model Checkpoints\n\nThree model versions of the model are available with different backbone sizes. These models can be instantiated by running\n\n```\nfrom segment_anything import sam_model_registry\nsam = sam_model_registry[\"<model_type>\"](checkpoint=\"<path/to/checkpoint>\")\n```\n\nClick the links below to download the checkpoint for the corresponding model type.\n\n- **`default` or `vit_h`: [ViT-H SAM model.](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth)**\n- `vit_l`: [ViT-L SAM model.](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth)\n- `vit_b`: [ViT-B SAM model.](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth)\n\n## Dataset\n\nSee [here](https://ai.facebook.com/datasets/segment-anything/) for an overview of the datastet. The dataset can be downloaded [here](https://ai.facebook.com/datasets/segment-anything-downloads/). By downloading the datasets you agree that you have read and accepted the terms of the SA-1B Dataset Research License.\n\nWe save masks per image as a json file. It can be loaded as a dictionary in python in the below format.\n\n```python\n{\n    \"image\"                 : image_info,",
+      "url": "https://github.com/facebookresearch/segment-anything/blob/dca509fe793f601edb92606367a655c15ac00fdf/README.md#L46-L124"
+    },
+    {
+      "id": "E3",
+      "path": "setup.py",
+      "lineStart": 1,
+      "lineEnd": 19,
+      "excerpt": "# Copyright (c) Meta Platforms, Inc. and affiliates.\n# All rights reserved.\n\n# This source code is licensed under the license found in the\n# LICENSE file in the root directory of this source tree.\n\nfrom setuptools import find_packages, setup\n\nsetup(\n    name=\"segment_anything\",\n    version=\"1.0\",\n    install_requires=[],\n    packages=find_packages(exclude=\"notebooks\"),\n    extras_require={\n        \"all\": [\"matplotlib\", \"pycocotools\", \"opencv-python\", \"onnx\", \"onnxruntime\"],\n        \"dev\": [\"flake8\", \"isort\", \"black\", \"mypy\"],\n    },\n)\n",
+      "url": "https://github.com/facebookresearch/segment-anything/blob/dca509fe793f601edb92606367a655c15ac00fdf/setup.py#L1-L19"
+    },
+    {
+      "id": "E4",
+      "path": "segment_anything/predictor.py",
+      "lineStart": 3,
+      "lineEnd": 51,
+      "excerpt": "\n# This source code is licensed under the license found in the\n# LICENSE file in the root directory of this source tree.\n\nimport numpy as np\nimport torch\n\nfrom segment_anything.modeling import Sam\n\nfrom typing import Optional, Tuple\n\nfrom .utils.transforms import ResizeLongestSide\n\n\nclass SamPredictor:\n    def __init__(\n        self,\n        sam_model: Sam,\n    ) -> None:\n        \"\"\"\n        Uses SAM to calculate the image embedding for an image, and then\n        allow repeated, efficient mask prediction given prompts.\n\n        Arguments:\n          sam_model (Sam): The model to use for mask prediction.\n        \"\"\"\n        super().__init__()\n        self.model = sam_model\n        self.transform = ResizeLongestSide(sam_model.image_encoder.img_size)\n        self.reset_image()\n\n    def set_image(\n        self,\n        image: np.ndarray,\n        image_format: str = \"RGB\",\n    ) -> None:\n        \"\"\"\n        Calculates the image embeddings for the provided image, allowing\n        masks to be predicted with the 'predict' method.\n\n        Arguments:\n          image (np.ndarray): The image for calculating masks. Expects an\n            image in HWC uint8 format, with pixel values in [0, 255].\n          image_format (str): The color format of the image, in ['RGB', 'BGR'].\n        \"\"\"\n        assert image_format in [\n            \"RGB\",\n            \"BGR\",\n        ], f\"image_format must be in ['RGB', 'BGR'], is {image_format}.\"",
+      "url": "https://github.com/facebookresearch/segment-anything/blob/dca509fe793f601edb92606367a655c15ac00fdf/segment_anything/predictor.py#L3-L51"
+    },
+    {
+      "id": "E5",
+      "path": "segment_anything/predictor.py",
+      "lineStart": 78,
+      "lineEnd": 126,
+      "excerpt": "        \"\"\"\n        assert (\n            len(transformed_image.shape) == 4\n            and transformed_image.shape[1] == 3\n            and max(*transformed_image.shape[2:]) == self.model.image_encoder.img_size\n        ), f\"set_torch_image input must be BCHW with long side {self.model.image_encoder.img_size}.\"\n        self.reset_image()\n\n        self.original_size = original_image_size\n        self.input_size = tuple(transformed_image.shape[-2:])\n        input_image = self.model.preprocess(transformed_image)\n        self.features = self.model.image_encoder(input_image)\n        self.is_image_set = True\n\n    def predict(\n        self,\n        point_coords: Optional[np.ndarray] = None,\n        point_labels: Optional[np.ndarray] = None,\n        box: Optional[np.ndarray] = None,\n        mask_input: Optional[np.ndarray] = None,\n        multimask_output: bool = True,\n        return_logits: bool = False,\n    ) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:\n        \"\"\"\n        Predict masks for the given input prompts, using the currently set image.\n\n        Arguments:\n          point_coords (np.ndarray or None): A Nx2 array of point prompts to the\n            model. Each point is in (X,Y) in pixels.\n          point_labels (np.ndarray or None): A length N array of labels for the\n            point prompts. 1 indicates a foreground point and 0 indicates a\n            background point.\n          box (np.ndarray or None): A length 4 array given a box prompt to the\n            model, in XYXY format.\n          mask_input (np.ndarray): A low resolution mask input to the model, typically\n            coming from a previous prediction iteration. Has form 1xHxW, where\n            for SAM, H=W=256.\n          multimask_output (bool): If true, the model will return three masks.\n            For ambiguous input prompts (such as a single click), this will often\n            produce better masks than a single prediction. If only a single\n            mask is needed, the model's predicted quality score can be used\n            to select the best mask. For non-ambiguous prompts, such as multiple\n            input prompts, multimask_output=False can give better results.\n          return_logits (bool): If true, returns un-thresholded masks logits\n            instead of a binary mask.\n\n        Returns:\n          (np.ndarray): The output masks in CxHxW format, where C is the\n            number of masks, and (H, W) is the original image size.",
+      "url": "https://github.com/facebookresearch/segment-anything/blob/dca509fe793f601edb92606367a655c15ac00fdf/segment_anything/predictor.py#L78-L126"
+    },
+    {
+      "id": "E6",
+      "path": "segment_anything/utils/transforms.py",
+      "lineStart": 2,
+      "lineEnd": 50,
+      "excerpt": "# All rights reserved.\n\n# This source code is licensed under the license found in the\n# LICENSE file in the root directory of this source tree.\n\nimport numpy as np\nimport torch\nfrom torch.nn import functional as F\nfrom torchvision.transforms.functional import resize, to_pil_image  # type: ignore\n\nfrom copy import deepcopy\nfrom typing import Tuple\n\n\nclass ResizeLongestSide:\n    \"\"\"\n    Resizes images to the longest side 'target_length', as well as provides\n    methods for resizing coordinates and boxes. Provides methods for\n    transforming both numpy array and batched torch tensors.\n    \"\"\"\n\n    def __init__(self, target_length: int) -> None:\n        self.target_length = target_length\n\n    def apply_image(self, image: np.ndarray) -> np.ndarray:\n        \"\"\"\n        Expects a numpy array with shape HxWxC in uint8 format.\n        \"\"\"\n        target_size = self.get_preprocess_shape(image.shape[0], image.shape[1], self.target_length)\n        return np.array(resize(to_pil_image(image), target_size))\n\n    def apply_coords(self, coords: np.ndarray, original_size: Tuple[int, ...]) -> np.ndarray:\n        \"\"\"\n        Expects a numpy array of length 2 in the final dimension. Requires the\n        original image size in (H, W) format.\n        \"\"\"\n        old_h, old_w = original_size\n        new_h, new_w = self.get_preprocess_shape(\n            original_size[0], original_size[1], self.target_length\n        )\n        coords = deepcopy(coords).astype(float)\n        coords[..., 0] = coords[..., 0] * (new_w / old_w)\n        coords[..., 1] = coords[..., 1] * (new_h / old_h)\n        return coords\n\n    def apply_boxes(self, boxes: np.ndarray, original_size: Tuple[int, ...]) -> np.ndarray:\n        \"\"\"\n        Expects a numpy array shape Bx4. Requires the original image size\n        in (H, W) format.",
+      "url": "https://github.com/facebookresearch/segment-anything/blob/dca509fe793f601edb92606367a655c15ac00fdf/segment_anything/utils/transforms.py#L2-L50"
+    },
+    {
+      "id": "E7",
+      "path": "segment_anything/modeling/transformer.py",
+      "lineStart": 48,
+      "lineEnd": 96,
+      "excerpt": "                    embedding_dim=embedding_dim,\n                    num_heads=num_heads,\n                    mlp_dim=mlp_dim,\n                    activation=activation,\n                    attention_downsample_rate=attention_downsample_rate,\n                    skip_first_layer_pe=(i == 0),\n                )\n            )\n\n        self.final_attn_token_to_image = Attention(\n            embedding_dim, num_heads, downsample_rate=attention_downsample_rate\n        )\n        self.norm_final_attn = nn.LayerNorm(embedding_dim)\n\n    def forward(\n        self,\n        image_embedding: Tensor,\n        image_pe: Tensor,\n        point_embedding: Tensor,\n    ) -> Tuple[Tensor, Tensor]:\n        \"\"\"\n        Args:\n          image_embedding (torch.Tensor): image to attend to. Should be shape\n            B x embedding_dim x h x w for any h and w.\n          image_pe (torch.Tensor): the positional encoding to add to the image. Must\n            have the same shape as image_embedding.\n          point_embedding (torch.Tensor): the embedding to add to the query points.\n            Must have shape B x N_points x embedding_dim for any N_points.\n\n        Returns:\n          torch.Tensor: the processed point_embedding\n          torch.Tensor: the processed image_embedding\n        \"\"\"\n        # BxCxHxW -> BxHWxC == B x N_image_tokens x C\n        bs, c, h, w = image_embedding.shape\n        image_embedding = image_embedding.flatten(2).permute(0, 2, 1)\n        image_pe = image_pe.flatten(2).permute(0, 2, 1)\n\n        # Prepare queries\n        queries = point_embedding\n        keys = image_embedding\n\n        # Apply transformer blocks and final layernorm\n        for layer in self.layers:\n            queries, keys = layer(\n                queries=queries,\n                keys=keys,\n                query_pe=point_embedding,\n                key_pe=image_pe,",
+      "url": "https://github.com/facebookresearch/segment-anything/blob/dca509fe793f601edb92606367a655c15ac00fdf/segment_anything/modeling/transformer.py#L48-L96"
+    },
+    {
+      "id": "E8",
+      "path": "notebooks/onnx_model_example.ipynb",
+      "lineStart": 170,
+      "lineEnd": 218,
+      "excerpt": "# %% [markdown 25]\n## Using an ONNX model\n\n# %% [markdown 26]\nHere as an example, we use `onnxruntime` in python on CPU to execute the ONNX model. However, any platform that supports an ONNX runtime could be used in principle. Launch the runtime session below:\n\n# %% [code 27]\nort_session = onnxruntime.InferenceSession(onnx_model_path)\n\n# %% [markdown 28]\nTo use the ONNX model, the image must first be pre-processed using the SAM image encoder. This is a heavier weight process best performed on GPU. SamPredictor can be used as normal, then `.get_image_embedding()` will retreive the intermediate features.\n\n# %% [code 29]\nsam.to(device='cuda')\npredictor = SamPredictor(sam)\n\n# %% [code 30]\npredictor.set_image(image)\n\n# %% [code 31]\nimage_embedding = predictor.get_image_embedding().cpu().numpy()\n\n# %% [code 32]\nimage_embedding.shape\n\n# %% [markdown 33]\nThe ONNX model has a different input signature than `SamPredictor.predict`. The following inputs must all be supplied. Note the special cases for both point and mask inputs. All inputs are `np.float32`.\n* `image_embeddings`: The image embedding from `predictor.get_image_embedding()`. Has a batch index of length 1.\n* `point_coords`: Coordinates of sparse input prompts, corresponding to both point inputs and box inputs. Boxes are encoded using two points, one for the top-left corner and one for the bottom-right corner. *Coordinates must already be transformed to long-side 1024.* Has a batch index of length 1.\n* `point_labels`: Labels for the sparse input prompts. 0 is a negative input point, 1 is a positive input point, 2 is a top-left box corner, 3 is a bottom-right box corner, and -1 is a padding point. *If there is no box input, a single padding point with label -1 and coordinates (0.0, 0.0) should be concatenated.*\n* `mask_input`: A mask input to the model with shape 1x1x256x256. This must be supplied even if there is no mask input. In this case, it can just be zeros.\n* `has_mask_input`: An indicator for the mask input. 1 indicates a mask input, 0 indicates no mask input.\n* `orig_im_size`: The size of the input image in (H,W) format, before any transformation. \n\nAdditionally, the ONNX model does not threshold the output mask logits. To obtain a binary mask, threshold at `sam.mask_threshold` (equal to 0.0).\n\n# %% [markdown 34]\n### Example point input\n\n# %% [code 35]\ninput_point = np.array([[500, 375]])\ninput_label = np.array([1])\n\n# %% [markdown 36]\nAdd a batch index, concatenate a padding point, and transform.\n\n# %% [code 37]\nonnx_coord = np.concatenate([input_point, np.array([[0.0, 0.0]])], axis=0)[None, :, :]\nonnx_label = np.concatenate([input_label, np.array([-1])], axis=0)[None, :].astype(np.float32)",
+      "url": "https://github.com/facebookresearch/segment-anything/blob/dca509fe793f601edb92606367a655c15ac00fdf/notebooks/onnx_model_example.ipynb"
+    },
+    {
+      "id": "E9",
+      "path": "demo/README.md",
+      "lineStart": 1,
+      "lineEnd": 65,
+      "excerpt": "## Segment Anything Simple Web demo\n\nThis **front-end only** React based web demo shows how to load a fixed image and corresponding `.npy` file of the SAM image embedding, and run the SAM ONNX model in the browser using Web Assembly with mulithreading enabled by `SharedArrayBuffer`, Web Worker, and SIMD128.\n\n<img src=\"https://github.com/facebookresearch/segment-anything/raw/main/assets/minidemo.gif\" width=\"500\"/>\n\n## Run the app\n\nInstall Yarn\n\n```\nnpm install --g yarn\n```\n\nBuild and run:\n\n```\nyarn && yarn start\n```\n\nNavigate to [`http://localhost:8081/`](http://localhost:8081/)\n\nMove your cursor around to see the mask prediction update in real time.\n\n## Export the image embedding\n\nIn the [ONNX Model Example notebook](https://github.com/facebookresearch/segment-anything/blob/main/notebooks/onnx_model_example.ipynb) upload the image of your choice and generate and save corresponding embedding.\n\nInitialize the predictor:\n\n```python\ncheckpoint = \"sam_vit_h_4b8939.pth\"\nmodel_type = \"vit_h\"\nsam = sam_model_registry[model_type](checkpoint=checkpoint)\nsam.to(device='cuda')\npredictor = SamPredictor(sam)\n```\n\nSet the new image and export the embedding:\n\n```\nimage = cv2.imread('src/assets/dogs.jpg')\npredictor.set_image(image)\nimage_embedding = predictor.get_image_embedding().cpu().numpy()\nnp.save(\"dogs_embedding.npy\", image_embedding)\n```\n\nSave the new image and embedding in `src/assets/data`.\n\n## Export the ONNX model\n\nYou also need to export the quantized ONNX model from the [ONNX Model Example notebook](https://github.com/facebookresearch/segment-anything/blob/main/notebooks/onnx_model_example.ipynb).\n\nRun the cell in the notebook which saves the `sam_onnx_quantized_example.onnx` file, download it and copy it to the path `/model/sam_onnx_quantized_example.onnx`.\n\nHere is a snippet of the export/quantization code:\n\n```\nonnx_model_path = \"sam_onnx_example.onnx\"\nonnx_model_quantized_path = \"sam_onnx_quantized_example.onnx\"\nquantize_dynamic(\n    model_input=onnx_model_path,\n    model_output=onnx_model_quantized_path,\n    optimize_model=True,\n    per_channel=False,",
+      "url": "https://github.com/facebookresearch/segment-anything/blob/dca509fe793f601edb92606367a655c15ac00fdf/demo/README.md#L1-L65"
+    },
+    {
+      "id": "E10",
+      "path": "scripts/export_onnx_model.py",
+      "lineStart": 49,
+      "lineEnd": 97,
+      "excerpt": ")\n\nparser.add_argument(\n    \"--opset\",\n    type=int,\n    default=17,\n    help=\"The ONNX opset version to use. Must be >=11\",\n)\n\nparser.add_argument(\n    \"--quantize-out\",\n    type=str,\n    default=None,\n    help=(\n        \"If set, will quantize the model and save it with this name. \"\n        \"Quantization is performed with quantize_dynamic from onnxruntime.quantization.quantize.\"\n    ),\n)\n\nparser.add_argument(\n    \"--gelu-approximate\",\n    action=\"store_true\",\n    help=(\n        \"Replace GELU operations with approximations using tanh. Useful \"\n        \"for some runtimes that have slow or unimplemented erf ops, used in GELU.\"\n    ),\n)\n\nparser.add_argument(\n    \"--use-stability-score\",\n    action=\"store_true\",\n    help=(\n        \"Replaces the model's predicted mask quality score with the stability \"\n        \"score calculated on the low resolution masks using an offset of 1.0. \"\n    ),\n)\n\nparser.add_argument(\n    \"--return-extra-metrics\",\n    action=\"store_true\",\n    help=(\n        \"The model will return five results: (masks, scores, stability_scores, \"\n        \"areas, low_res_logits) instead of the usual three. This can be \"\n        \"significantly slower for high resolution outputs.\"\n    ),\n)\n\n\ndef run_export(",
+      "url": "https://github.com/facebookresearch/segment-anything/blob/dca509fe793f601edb92606367a655c15ac00fdf/scripts/export_onnx_model.py#L49-L97"
+    }
+  ]
+}

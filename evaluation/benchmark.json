@@ -1,0 +1,223 @@
+{
+  "version": 2,
+  "labeledAt": "2026-08-25T01:20:00+08:00",
+  "methodology": "Expected files were checked against each repository's default-branch tree. Exact-path coverage is measured separately from semantic citation review. Cases with focus evaluate an explicitly selected subproject and are not directly comparable with whole-repository runs.",
+  "cases": [
+    {
+      "id": "nanogpt",
+      "batch": 1,
+      "repository": "karpathy/nanoGPT",
+      "defaultBranch": "master",
+      "revision": "3adf61e154c3fe3fca428ad6bc3818b27a3b8291",
+      "language": "Python",
+      "goal": "reproduce",
+      "depth": "standard",
+      "expectedFiles": [
+        { "path": "README.md", "role": "entry" },
+        { "path": "train.py", "role": "execution" },
+        { "path": "model.py", "role": "model" },
+        { "path": "config/train_shakespeare_char.py", "role": "configuration" },
+        { "path": "data/shakespeare_char/prepare.py", "role": "data" }
+      ]
+    },
+    {
+      "id": "whisper",
+      "batch": 1,
+      "repository": "openai/whisper",
+      "defaultBranch": "main",
+      "revision": "5f86d1d86363843179951550570367b37c5d6f78",
+      "language": "Python",
+      "goal": "reproduce",
+      "depth": "standard",
+      "expectedFiles": [
+        { "path": "README.md", "role": "entry" },
+        { "path": "whisper/transcribe.py", "role": "execution" },
+        { "path": "whisper/decoding.py", "role": "core" },
+        { "path": "whisper/model.py", "role": "model" },
+        { "path": "whisper/audio.py", "role": "data" },
+        { "path": "tests/test_transcribe.py", "role": "test" },
+        { "path": "pyproject.toml", "role": "configuration" }
+      ]
+    },
+    {
+      "id": "segment-anything",
+      "batch": 1,
+      "repository": "facebookresearch/segment-anything",
+      "defaultBranch": "main",
+      "revision": "dca509fe793f601edb92606367a655c15ac00fdf",
+      "language": "Python",
+      "goal": "overview",
+      "depth": "standard",
+      "expectedFiles": [
+        { "path": "README.md", "role": "entry" },
+        { "path": "segment_anything/build_sam.py", "role": "construction" },
+        { "path": "segment_anything/predictor.py", "role": "execution" },
+        { "path": "segment_anything/modeling/sam.py", "role": "model" },
+        { "path": "scripts/amg.py", "role": "example" },
+        { "path": "setup.py", "role": "configuration" }
+      ]
+    },
+    {
+      "id": "llama-cpp",
+      "batch": 1,
+      "repository": "ggml-org/llama.cpp",
+      "defaultBranch": "master",
+      "revision": "f280b26983ad0fdb705a0d9ebf0503e76f2899b0",
+      "language": "C++",
+      "goal": "overview",
+      "depth": "standard",
+      "expectedFiles": [
+        { "path": "README.md", "role": "entry" },
+        { "path": "CMakeLists.txt", "role": "configuration" },
+        { "path": "src/llama.cpp", "role": "api" },
+        { "path": "src/llama-model.cpp", "role": "model" },
+        { "path": "common/common.cpp", "role": "core" },
+        { "path": "tools/cli/main.cpp", "role": "execution" }
+      ]
+    },
+    {
+      "id": "candle",
+      "batch": 2,
+      "repository": "huggingface/candle",
+      "defaultBranch": "main",
+      "revision": "81f247a8985e0b5b6c7c7c5b35c07dc685e005e9",
+      "language": "Rust",
+      "goal": "overview",
+      "depth": "standard",
+      "expectedFiles": [
+        { "path": "README.md", "role": "entry" },
+        { "path": "Cargo.toml", "role": "configuration" },
+        { "path": "candle-core/src/lib.rs", "role": "api" },
+        { "path": "candle-core/src/tensor.rs", "role": "core" },
+        { "path": "candle-nn/src/lib.rs", "role": "model" },
+        { "path": "candle-transformers/src/lib.rs", "role": "model" },
+        { "path": "candle-examples/examples/bert/main.rs", "role": "example" }
+      ]
+    },
+    {
+      "id": "mlx-examples",
+      "batch": 2,
+      "repository": "ml-explore/mlx-examples",
+      "defaultBranch": "main",
+      "revision": "796f5b53cab69a3d48a44233ce21aae889e94a08",
+      "language": "Python",
+      "goal": "reproduce",
+      "depth": "standard",
+      "expectedFiles": [
+        { "path": "README.md", "role": "entry" },
+        { "path": "lora/README.md", "role": "entry" },
+        { "path": "lora/lora.py", "role": "execution" },
+        { "path": "lora/models.py", "role": "model" },
+        { "path": "lora/requirements.txt", "role": "configuration" }
+      ]
+    },
+    {
+      "id": "trl",
+      "batch": 2,
+      "repository": "huggingface/trl",
+      "defaultBranch": "main",
+      "revision": "07a59e685bf5f425af06f27ad08f01fc59d21dd0",
+      "language": "Python",
+      "goal": "contribute",
+      "depth": "standard",
+      "expectedFiles": [
+        { "path": "README.md", "role": "entry" },
+        { "path": "pyproject.toml", "role": "configuration" },
+        { "path": "trl/cli/main.py", "role": "execution" },
+        { "path": "trl/trainer/grpo_trainer.py", "role": "core" },
+        { "path": "trl/trainer/sft_trainer.py", "role": "core" },
+        { "path": "tests/test_grpo_trainer.py", "role": "test" }
+      ]
+    },
+    {
+      "id": "pytorch-examples",
+      "batch": 2,
+      "repository": "pytorch/examples",
+      "defaultBranch": "main",
+      "revision": "acc295dc7b90714f1bf47f06004fc19a7fe235c4",
+      "language": "Python/C++",
+      "goal": "reproduce",
+      "depth": "standard",
+      "expectedFiles": [
+        { "path": "README.md", "role": "entry" },
+        { "path": "mnist/main.py", "role": "example" },
+        { "path": "dcgan/main.py", "role": "example" },
+        { "path": "imagenet/main.py", "role": "example" },
+        { "path": "distributed/ddp/example.py", "role": "example" }
+      ]
+    },
+    {
+      "id": "vision-transformer",
+      "batch": 3,
+      "repository": "google-research/vision_transformer",
+      "defaultBranch": "main",
+      "revision": "64801f1b3b367b3611cc27a3d45cc22870a36fb3",
+      "language": "Python",
+      "goal": "reproduce",
+      "depth": "standard",
+      "expectedFiles": [
+        { "path": "README.md", "role": "entry" },
+        { "path": "setup.py", "role": "configuration" },
+        { "path": "vit_jax/main.py", "role": "execution" },
+        { "path": "vit_jax/train.py", "role": "training" },
+        { "path": "vit_jax/models_vit.py", "role": "model" },
+        { "path": "vit_jax/configs/vit.py", "role": "configuration" },
+        { "path": "vit_jax/train_test.py", "role": "test" }
+      ]
+    },
+    {
+      "id": "onnx",
+      "batch": 3,
+      "repository": "onnx/onnx",
+      "defaultBranch": "main",
+      "revision": "5d1086b68b5bbd2451e8cf97731ab29b195ab550",
+      "language": "Python/C++",
+      "goal": "contribute",
+      "depth": "standard",
+      "expectedFiles": [
+        { "path": "README.md", "role": "entry" },
+        { "path": "CMakeLists.txt", "role": "configuration" },
+        { "path": "pyproject.toml", "role": "configuration" },
+        { "path": "onnx/__init__.py", "role": "api" },
+        { "path": "onnx/checker.py", "role": "validation" },
+        { "path": "onnx/helper.py", "role": "core" },
+        { "path": "onnx/shape_inference.py", "role": "core" }
+      ]
+    },
+    {
+      "id": "mlx-lora-focused",
+      "batch": 4,
+      "repository": "ml-explore/mlx-examples",
+      "defaultBranch": "main",
+      "revision": "796f5b53cab69a3d48a44233ce21aae889e94a08",
+      "language": "Python",
+      "goal": "reproduce",
+      "depth": "standard",
+      "focus": "lora",
+      "expectedFiles": [
+        { "path": "README.md", "role": "entry" },
+        { "path": "lora/README.md", "role": "entry" },
+        { "path": "lora/lora.py", "role": "execution" },
+        { "path": "lora/models.py", "role": "model" },
+        { "path": "lora/requirements.txt", "role": "configuration" }
+      ]
+    },
+    {
+      "id": "pytorch-mnist-focused",
+      "batch": 4,
+      "repository": "pytorch/examples",
+      "defaultBranch": "main",
+      "revision": "acc295dc7b90714f1bf47f06004fc19a7fe235c4",
+      "language": "Python",
+      "goal": "reproduce",
+      "depth": "standard",
+      "focus": "mnist",
+      "expectedFiles": [
+        { "path": "README.md", "role": "entry" },
+        { "path": "mnist/README.md", "role": "entry" },
+        { "path": "mnist/main.py", "role": "execution" },
+        { "path": "mnist/requirements.txt", "role": "configuration" }
+      ]
+    }
+  ]
+}

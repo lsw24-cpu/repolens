@@ -1,0 +1,48 @@
+{
+  "evaluatedAt": "2026-08-24",
+  "mode": "standard",
+  "model": "deepseek-v4-flash",
+  "repositories": [
+    {
+      "repository": "karpathy/nanoGPT",
+      "supported": 22,
+      "partial": 3,
+      "unsupported": 0,
+      "unverifiable": 0,
+      "strictSupport": 0.88,
+      "weightedSupport": 0.94
+    },
+    {
+      "repository": "openai/whisper",
+      "supported": 22,
+      "partial": 3,
+      "unsupported": 0,
+      "unverifiable": 0,
+      "strictSupport": 0.88,
+      "weightedSupport": 0.94
+    },
+    {
+      "repository": "facebookresearch/segment-anything",
+      "supported": 23,
+      "partial": 0,
+      "unsupported": 0,
+      "unverifiable": 0,
+      "strictSupport": 1.0,
+      "weightedSupport": 1.0
+    }
+  ],
+  "totals": {
+    "fields": 73,
+    "supported": 67,
+    "partial": 6,
+    "unsupported": 0,
+    "unverifiable": 0,
+    "strictSupport": 0.918,
+    "weightedSupport": 0.959,
+    "displayedCommands": 15,
+    "commandsAbsentFromEvidence": 0,
+    "missingEvidenceIds": 0,
+    "mutableRevisionLinks": 0,
+    "knownAmbiguousCallMismatches": 0
+  }
+}

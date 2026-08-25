@@ -1,0 +1,16 @@
+{
+  "runAt": "2026-08-24T17:53:42.163Z",
+  "mode": "deterministic",
+  "cases": [
+    { "repository": "karpathy/nanoGPT", "coverage": 1.0, "latencySeconds": 2.4 },
+    { "repository": "openai/whisper", "coverage": 0.714, "latencySeconds": 1.8 },
+    { "repository": "facebookresearch/segment-anything", "coverage": 0.5, "latencySeconds": 1.9 }
+  ],
+  "summary": {
+    "meanCoverage": 0.738,
+    "invalidEvidenceIdRate": 0.0,
+    "medianLatencySeconds": 1.9,
+    "modelCalls": 0,
+    "modelTokens": 0
+  }
+}
