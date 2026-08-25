@@ -1,0 +1,48 @@
+name: Bug report
+description: Report a reproducible problem in the web or macOS application.
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the result you saw and what you expected instead.
+    validations:
+      required: true
+  - type: input
+    id: repository
+    attributes:
+      label: Repository analyzed
+      description: Add the public repository URL when it is safe to share.
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where did this happen?
+      options:
+        - Web application
+        - macOS application
+        - Local development
+        - Benchmark or test
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include the research goal, scope, analysis depth, and the shortest sequence that reproduces the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Relevant output
+      description: Add screenshots or logs after removing tokens, private paths, and personal information.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: This report contains no credentials or private information.
+          required: true

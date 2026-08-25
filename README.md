@@ -1,12 +1,14 @@
 # RepoLens
 
-**Evidence-grounded intelligence for understanding and reproducing research code.**
+Source-grounded repository analysis for research and software projects.
 
-RepoLens turns a public GitHub repository into an auditable research brief. It connects architecture, mechanisms, reproduction steps, and verification questions to exact source evidence at an immutable revision.
+[Web application](https://repolens.lsw-research-code.workers.dev) · [macOS download](https://github.com/lsw24-cpu/repolens/releases/latest)
 
-Open the [public web application](https://repolens.lsw-research-code.workers.dev) or download the native macOS application from the [latest GitHub release](https://github.com/lsw24-cpu/repolens/releases/latest).
+![RepoLens interface](docs/assets/repolens-home.jpg)
 
-## Product workflow
+RepoLens reads a public GitHub repository, identifies the files relevant to a selected task, and links its report to source at a fixed revision.
+
+## Workflow
 
 1. Enter a public GitHub repository and select a research goal.
 2. Review the repository map, mechanism summary, and fixed revision.
@@ -15,18 +17,11 @@ Open the [public web application](https://repolens.lsw-research-code.workers.dev
 5. Answer repository-specific verification questions.
 6. Export a Markdown report with evidence and next actions.
 
-## Capabilities
+## How it works
 
-- GitHub metadata, repository-tree, README, configuration, test, notebook, and source-code retrieval
-- Research-aware file ranking, symbol discovery, cross-file relationships, and stable E-series citations
-- Architecture, reproduction, and continued-development research goals
-- Adjustable analysis depth and optional bounded evidence exploration
-- Schema-constrained DeepSeek analysis with server-side path, citation, and command validation
-- Deterministic evidence analysis when model access is unavailable
-- Reproduction steps with prerequisites, command provenance, missing conditions, and deviation records
-- Repository-specific verification questions and Markdown export
-- Per-request model-call, token-usage, and analysis-mode telemetry
-- Native macOS evidence workspace with local notes, change tracking, and optional entitlement support
+RepoLens retrieves a bounded set of repository files, ranks them by their role in the selected task, and builds evidence windows at an immutable commit. Structured analysis is checked against those windows before it reaches the report. Paths, citations, source links, and reproduction commands are validated on the server.
+
+Without an API key, RepoLens produces a deterministic evidence report.
 
 ## Quick start
 
@@ -72,7 +67,7 @@ A field-level review of reports for nanoGPT, Whisper, and Segment Anything cover
 
 See [`evaluation/semantic-evaluation.md`](evaluation/semantic-evaluation.md).
 
-These evaluations measure retrieval coverage, evidence support, and planning quality. They do not claim that third-party experiments were executed successfully.
+Benchmark scope: retrieval coverage, evidence support, and planning quality. Third-party experiment execution is outside this evaluation.
 
 ## Architecture
 
