@@ -2,21 +2,21 @@
 
 ## Security goals
 
-1. Do not expose platform secrets or a researcher's local progress.
-2. Do not treat malicious instructions in third-party repositories as system instructions.
-3. Do not present unsupported model claims as repository facts.
-4. Do not execute installation, test, or training commands without researcher review.
+- Keep platform secrets and local analysis history private.
+- Isolate repository content from model instructions.
+- Link report claims and commands to retrieved source.
+- Leave command execution to the user.
 
 ## Primary threats and controls
 
 | Threat | Entry | Control | Residual risk |
 |---|---|---|---|
-| Prompt injection | README, source comments, sample data | Explicit instruction isolation; repository content appears only in evidence blocks | The model can still misread text, so source links remain available for human review |
-| Fabricated citations | Model-generated evidence identifiers | Server-side allow-list validation | A valid identifier may still provide weak support, so researchers must read the source |
-| Dangerous commands | Model-generated installation or execution steps | Commands must appear verbatim in cited evidence or are removed; the site never runs commands | A command in original repository text can still be malicious, so isolated execution is required |
-| Service abuse | High-volume GitHub or model requests | Public GitHub repositories only, request timeouts, and bounded file retrieval | The current prototype has no distributed rate limiter |
-| Privacy leakage | Analysis history and API requests | Progress remains in the browser; DeepSeek Responses API calls are stateless | Repository names and selected source are sent to the model service when AI is enabled |
+| Prompt injection | README, source comments, sample data | Repository content is placed in evidence blocks, separate from model instructions | Source text may still be misread |
+| Incorrect citations | Generated evidence identifiers | Server-side allow-list validation | A valid citation can provide incomplete support |
+| Unsafe commands | Installation or execution steps | Commands must appear in cited evidence; the site does not run them | Repository documentation can contain unsafe commands |
+| Service abuse | GitHub or model requests | Timeouts and bounded file retrieval | No distributed rate limiter |
+| Privacy leakage | Analysis history and API requests | Progress stays in the browser; DeepSeek requests are stateless | Selected repository content is sent to DeepSeek when enabled |
 
 ## Non-goals
 
-The current version does not execute repository code, scan complete dependency supply chains, or guarantee that any third-party project is safe to run. It is an auditable reading and reproduction-preparation layer, not a sandbox execution platform.
+RepoLens reads selected source files and prepares reproduction steps. It does not execute repository code or audit dependency supply chains.

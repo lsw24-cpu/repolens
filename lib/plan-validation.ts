@@ -228,7 +228,7 @@ export function validatePlan(plan: AnalysisPlan, fallback: AnalysisPlan, evidenc
     reproduction: {
       ...plan.reproduction,
       readiness: commandCount > 0 ? "partial" : "unknown",
-      summary: `The current evidence contains ${commandCount} reproduction command${commandCount === 1 ? "" : "s"} that can be verified verbatim. This is a plan to execute, not a claim that reproduction is complete. Verify the environment, data, model weights, and hardware requirements before running it.`,
+      summary: `The cited source contains ${commandCount} reproduction command${commandCount === 1 ? "" : "s"}. Record the environment, data, model weights, hardware, and outputs when running them.`,
       evidenceIds: reproductionEvidenceIds,
       steps: reproductionSteps,
       warnings,

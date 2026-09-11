@@ -23,7 +23,7 @@ Fixed `lora` scope in `mlx-examples` and `mnist` scope in `pytorch/examples` bot
 | ggml-org/llama.cpp | 16.7% | 16.7% | 0.0 points |
 | **Mean** | **30.5%** | **63.7%** | **+33.2 points** |
 
-The paired run records an invalid evidence-ID rate of 0.0%. It measures retrieval coverage rather than semantic accuracy.
+The paired run records an invalid evidence-ID rate of 0.0%.
 
 ## Semantic support
 
@@ -36,11 +36,8 @@ The paired run records an invalid evidence-ID rate of 0.0%. It measures retrieva
 
 All 15 displayed reproduction commands appear verbatim in their cited evidence. Full commit revisions, evidence links, and server-issued identifiers are checked for every reviewed report.
 
-## Metric boundaries
+## Scope
 
-- Exact-path key-file coverage compares retrieved paths with a labeled set; it does not establish that every retrieved file is semantically necessary.
-- Valid evidence identifiers establish structural traceability; semantic support still requires review of the cited source.
-- A reproduction plan records source-grounded steps and open conditions; it is not evidence that an experiment ran successfully.
-- Repository updates require a new labeled revision and evaluation record.
+Key-file coverage compares retrieved paths with a labeled set. Semantic support is reviewed separately against the displayed source windows. The benchmark checks retrieval and report evidence; it does not run third-party experiments. Each result is tied to a labeled repository revision.
 
 Machine-readable results are stored in [`evaluation/results`](../evaluation/results), and the semantic-review summary is stored in [`evaluation/semantic-evaluation.md`](../evaluation/semantic-evaluation.md).

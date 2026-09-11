@@ -60,7 +60,7 @@ test("hides unsupported commands embedded in learning tasks", () => {
   );
 });
 
-test("uses a deterministic next action and conservative reproduction summary", () => {
+test("uses a deterministic next action and source-based reproduction summary", () => {
   const shared = {
     summary: "Project summary.",
     summaryEvidenceIds: ["E1"],
@@ -104,7 +104,7 @@ test("uses a deterministic next action and conservative reproduction summary", (
   assert.equal(validated.firstContribution, fallback.firstContribution);
   assert.deepEqual(validated.architectureEvidenceIds, ["E1", "E2"]);
   assert.equal(validated.reproduction.readiness, "partial");
-  assert.match(validated.reproduction.summary, /2 reproduction commands that can be verified verbatim/);
+  assert.match(validated.reproduction.summary, /cited source contains 2 reproduction commands/);
   assert.equal(validated.reproduction.steps[0].command, "pip install -e .");
   assert.deepEqual(validated.reproduction.warnings, fallback.reproduction.warnings);
   assert.equal(validated.confidence, "exploratory");

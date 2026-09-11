@@ -183,7 +183,7 @@ export default function Home() {
           <div className="trace-stage"><span>02</span><div><b>{analysis.exploration.mode === "agent" ? "EXPLORE" : "REASON"}</b><small>{analysis.exploration.mode === "agent" ? "Close evidence gaps" : "Mechanisms and architecture"}</small></div><em>{analysis.exploration.mode === "agent" ? `${analysis.exploration.rounds} rounds` : `${analysis.concepts.length} concepts`}</em></div>
           <div className="trace-stage"><span>03</span><div><b>REPRODUCE</b><small>Commands and deviations</small></div><em>{analysis.reproduction.steps.length} steps</em></div>
           <div className="trace-stage"><span>04</span><div><b>VERIFY</b><small>Questions and evidence</small></div><em>{analysis.quiz.length} checks</em></div>
-          <p>The Agent reads repository evidence only. Every claim must still return a server-issued E-series identifier.</p>
+          <p>Agent exploration selects additional files from a server-approved candidate list.</p>
         </aside>
       </section>
 
@@ -195,9 +195,9 @@ export default function Home() {
 
       <section className="benchmark-section" id="benchmark">
         <div className="benchmark-intro">
-          <span className="section-kicker">MEASURED, NOT CLAIMED</span>
+          <span className="section-kicker">BENCHMARK</span>
           <h2>Retrieval quality measured on real research repositories</h2>
-          <p>The fixed benchmark compares README-only retrieval with RepoLens evidence-aware retrieval on the same public Python AI repositories. The metric is exact-path recall against human-labeled key files; it is not semantic accuracy or reproduction success.</p>
+          <p>The fixed benchmark compares README-only retrieval with RepoLens retrieval on the same public Python AI repositories. It reports exact-path recall against human-labeled key files.</p>
           <div className="benchmark-metrics">
             <div><strong>35.1% → 73.8%</strong><small>Mean Python key-file recall</small></div>
             <div><strong>+38.7 pp</strong><small>Deterministic retrieval gain</small></div>
@@ -208,7 +208,7 @@ export default function Home() {
         <div className="benchmark-table" role="table" aria-label="Python research repository retrieval results">
           <div className="benchmark-row benchmark-head" role="row"><span>Repository</span><span>README-only</span><span>RepoLens</span><span>Difference</span></div>
           {benchmarkRows.map((row) => <div className="benchmark-row" role="row" key={row.repository}><b>{row.repository}</b><span>{row.readmeOnly}</span><span>{row.repoLens}</span><em>{row.difference}</em></div>)}
-          <p>Multi-project repositories were tested separately: the fixed `lora` and `mnist` scopes both reached 100% exact-path recall. Scoped reports should not be compared directly with whole-repository results.</p>
+          <p>Separate scoped tests for `lora` and `mnist` both reached 100% exact-path recall.</p>
         </div>
       </section>
 
@@ -241,14 +241,14 @@ export default function Home() {
           <article className="brief-card"><span>03 · Next research action</span><p>{analysis.firstContribution}</p><div className="citation-row">{analysis.firstContributionEvidenceIds.map((id) => <a key={id} href={`#evidence-${id}`}>{id} · {evidenceById.get(id)?.path}</a>)}</div></article>
         </div>
 
-        <div className="concept-head"><div><span className="section-kicker">MECHANISM MAP</span><h3>Key mechanisms, not a generic summary</h3></div><div className="tech-list">{analysis.technologies.map((tech) => <span key={tech}>{tech}</span>)}</div></div>
+        <div className="concept-head"><div><span className="section-kicker">MECHANISM MAP</span><h3>Key mechanisms</h3></div><div className="tech-list">{analysis.technologies.map((tech) => <span key={tech}>{tech}</span>)}</div></div>
         <div className="concept-grid">
           {analysis.concepts.map((concept, index) => <article key={`${concept.title}-${index}`}><div className="concept-index">0{index + 1}</div><span className={`importance ${concept.importance}`}>{importanceLabels[concept.importance]}</span><h4>{concept.title}</h4><p>{concept.explanation}</p><div className="citation-row">{concept.evidenceIds.map((id) => <a key={id} href={`#evidence-${id}`}>{id} · {evidenceById.get(id)?.path}</a>)}</div></article>)}
         </div>
       </section>
 
       <section className="evidence-section" id="evidence">
-        <div className="section-title-row"><div><span className="section-kicker">AUDITABLE EVIDENCE</span><h2>Trace claims back to source</h2><p>Repository text is treated as data, not instructions. The model can cite only server-issued evidence identifiers.</p></div><span className="evidence-count">{analysis.keyFiles.length} key evidence windows</span></div>
+        <div className="section-title-row"><div><span className="section-kicker">SOURCE EVIDENCE</span><h2>Trace claims back to source</h2><p>Each report claim links to a server-issued evidence identifier.</p></div><span className="evidence-count">{analysis.keyFiles.length} key evidence windows</span></div>
         <div className="evidence-layout">
           <div className="evidence-index">
             {analysis.keyFiles.map((file) => <a href={`#evidence-${file.id}`} key={file.id}><b>{file.id}</b><span><strong>{file.path}</strong><small>{file.role}</small></span></a>)}
@@ -263,7 +263,7 @@ export default function Home() {
       </section>
 
       <section className="review-section" id="review">
-        <div className="section-title-row dark-title"><div><span className="section-kicker">RESEARCH PATH</span><h2>Turn reading into verifiable research tasks</h2></div><div className="progress-block"><span>{progress}%</span><div><i style={{ width: `${progress}%` }} /></div><small>{completed.length}/{analysis.learningPath.length} stages complete · stored on this device only</small></div></div>
+        <div className="section-title-row dark-title"><div><span className="section-kicker">RESEARCH PATH</span><h2>Build a research path</h2></div><div className="progress-block"><span>{progress}%</span><div><i style={{ width: `${progress}%` }} /></div><small>{completed.length}/{analysis.learningPath.length} stages complete · stored on this device only</small></div></div>
         <div className="review-layout">
           <div className="step-nav">
             {analysis.learningPath.map((step, index) => <button key={step.number} className={activeStep === index ? "active" : ""} onClick={() => setActiveStep(index)}><span>{step.number}</span><div><b>{step.title}</b><small>{step.minutes} minutes</small></div><i className={completed.includes(step.number) ? "done" : ""}>{completed.includes(step.number) ? "✓" : ""}</i></button>)}
@@ -280,7 +280,7 @@ export default function Home() {
       </section>
 
       <section className="reproduce-section" id="reproduce">
-        <div className="section-title-row"><div><span className="section-kicker">REPRODUCTION LAB</span><h2>Reproduction means preserving evidence, not merely running code</h2><p>{analysis.reproduction.summary}</p><div className="citation-row">{analysis.reproduction.evidenceIds.map((id) => <a key={id} href={`#evidence-${id}`}>{id} · {evidenceById.get(id)?.path}</a>)}</div></div><span className={`readiness ${analysis.reproduction.readiness}`}>{analysis.reproduction.readiness === "ready" ? "Conditions documented" : analysis.reproduction.readiness === "partial" ? "Conditions incomplete" : "Insufficient evidence"}</span></div>
+        <div className="section-title-row"><div><span className="section-kicker">REPRODUCTION</span><h2>Evidence-backed reproduction plan</h2><p>{analysis.reproduction.summary}</p><div className="citation-row">{analysis.reproduction.evidenceIds.map((id) => <a key={id} href={`#evidence-${id}`}>{id} · {evidenceById.get(id)?.path}</a>)}</div></div><span className={`readiness ${analysis.reproduction.readiness}`}>{analysis.reproduction.readiness === "ready" ? "Conditions documented" : analysis.reproduction.readiness === "partial" ? "Conditions incomplete" : "Insufficient evidence"}</span></div>
         <div className="repro-grid">
           <div className="repro-steps">
             {analysis.reproduction.steps.map((step, index) => <article key={`${step.title}-${index}`}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{step.title}</h3><p>{step.reason}</p>{step.command ? <div className="command"><code>{step.command}</code><button onClick={() => copyCommand(step.command, step.title)}>{copied === step.title ? "Copied" : "Copy"}</button></div> : <div className="no-command">Repository evidence does not provide a verified command. Review the cited file first.</div>}<div className="citation-row">{step.evidenceIds.map((id) => <a key={id} href={`#evidence-${id}`}>{id} · {evidenceById.get(id)?.path}</a>)}</div></div></article>)}
@@ -290,7 +290,7 @@ export default function Home() {
       </section>
 
       <section className="verify-section" id="verify">
-        <div className="verify-intro"><span className="section-kicker">UNDERSTANDING CHECK</span><h2>Make research judgments answerable to evidence</h2><p>Use repository-specific questions to test whether you understand the mechanism and reproduction conditions instead of merely browsing files.</p><div className="score-card"><strong>{score}/{analysis.quiz.length}</strong><span>correct now</span></div></div>
+        <div className="verify-intro"><span className="section-kicker">UNDERSTANDING CHECK</span><h2>Check your understanding</h2><p>Repository-specific questions cover the implementation and reproduction conditions.</p><div className="score-card"><strong>{score}/{analysis.quiz.length}</strong><span>correct now</span></div></div>
         <div className="quiz-list">
           {analysis.quiz.map((quiz, quizIndex) => {
             const selected = answers[quizIndex];
@@ -304,7 +304,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer><div className="brand"><span className="brand-mark">RL</span><span>RepoLens</span></div><p>Open-source intelligence for reproducible research.</p><span>Evidence-grounded · Research-first · Open source</span></footer>
+      <footer><div className="brand"><span className="brand-mark">RL</span><span>RepoLens</span></div><p>Repository analysis with traceable evidence.</p><span>Research code · Reproduction · Verification</span></footer>
     </main>
   );
 }

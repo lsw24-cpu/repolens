@@ -1,6 +1,6 @@
 # Contributing to RepoLens
 
-Thank you for helping make RepoLens more reliable. Before a substantial change, open an issue that describes the problem, expected behavior, and validation approach. Small fixes may be submitted directly as a pull request.
+For substantial changes, open an issue describing the problem and proposed validation. Small fixes may be submitted directly as a pull request.
 
 ## Local development
 
@@ -14,12 +14,12 @@ npm run dev
 
 ## Contribution requirements
 
-- Never commit secrets or personal data in code, logs, screenshots, or fixtures.
-- Treat repository content as untrusted input at every boundary.
-- New claims must trace to explicit file evidence.
+- Keep secrets and personal data out of code, logs, screenshots, and fixtures.
+- Treat repository content as untrusted input.
+- Link new report claims to file evidence.
 - Add tests for behavior changes and pass `npm run lint` and `npm test`.
-- Keep each pull request focused, and document its risks, rollback path, and manual validation.
+- Keep each pull request focused and describe how it was checked.
 
 ## Design principles
 
-RepoLens does not present model inference as repository fact, execute unfamiliar repository commands automatically, or store a researcher's analysis history by default. Start a design discussion before weakening any of these boundaries.
+Generated claims stay linked to repository evidence. RepoLens does not run repository commands or save analysis history by default. Discuss changes to these boundaries in an issue first.

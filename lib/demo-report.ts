@@ -153,7 +153,7 @@ export const samDemo: RepoAnalysis = {
     {
       number: "04",
       title: "Prepare an ONNX reproduction",
-      description: "Connect the export script, notebook input signature, and browser demo without claiming that the commands have already run.",
+      description: "Connect the export script, notebook input signature, and browser demo, then record the required environment.",
       files: ["scripts/export_onnx_model.py", "notebooks/onnx_model_example.ipynb", "demo/README.md"],
       evidenceIds: ["E8", "E9", "E10"],
       minutes: 42,
@@ -163,7 +163,7 @@ export const samDemo: RepoAnalysis = {
   ],
   reproduction: {
     readiness: "partial",
-    summary: "The current evidence provides five verbatim reproduction commands. This is a plan awaiting execution, not a claim that reproduction has succeeded; environment, checkpoints, hardware, and outputs still require verification.",
+    summary: "The repository documents five reproduction commands. Record the environment, checkpoints, hardware, and outputs when running them.",
     evidenceIds: ["E1", "E2", "E9"],
     steps: [
       {
@@ -199,7 +199,7 @@ export const samDemo: RepoAnalysis = {
     ],
     warnings: [
       { text: "Inspect scripts and use an isolated environment before running an unfamiliar repository.", evidenceIds: [] },
-      { text: "These steps have not been executed; hardware, runtime, outputs, and deviations must be recorded in the target environment.", evidenceIds: [] },
+      { text: "Record hardware, runtime, outputs, and deviations in the target environment.", evidenceIds: [] },
       { text: "Commands containing angle-bracket placeholders require explicit local values before execution.", evidenceIds: ["E2"] },
     ],
   },
